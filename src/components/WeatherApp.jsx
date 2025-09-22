@@ -26,6 +26,7 @@ function WeatherApp() {
           appid: API_KEY,
         },
       });
+      console.log("response===",res)
       setWeather({ data: res.data, loading: false, error: false });
     } catch (error) {
       setWeather({ ...weather, data: {}, error: true });
